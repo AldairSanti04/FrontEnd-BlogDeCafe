@@ -50,3 +50,35 @@ h3 {
 h4 {
 	font-size: 2.8rem;
 }
+
+img {
+	max-width: 100%;
+}
+
+/* UTILIDADES */
+.no-margin {
+	margin: 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.centrar-texto {
+	text-align: center;
+}
+
+/* HEADER */
+.header {
+	background-image: url(../img/banner.jpg);
+	height: 60rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.header-texto {
+	text-align: center;
+	color: white;
+	margin-top: 5rem;
+}
