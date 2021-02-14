@@ -25,6 +25,7 @@ body {
 .contenedor {
 	max-width: 120rem;
 	width: 90%;
+	/* width: min(90%, 120rem) */
 	margin: 0 auto;
 }
 
@@ -90,7 +91,12 @@ img {
 		margin-top: 15rem;
 	}
 }
+
 /* NAVEGACION */
+.barra {
+	padding-top: 4rem;
+}
+
 @media (min-width: 768px) {
 	.barra {
 		display: flex;
@@ -197,4 +203,10 @@ img {
 .widget-curso-label,
 .widget-curso-info {
 	font-size: 2rem;
+}
+
+.footer {
+	background-color: black;
+	padding-bottom: 4rem;
+	margin-top: 4rem;
 }
