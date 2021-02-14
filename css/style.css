@@ -3,6 +3,7 @@
 	--fuenteP: 'Open Sans', sans-serif;
 
 	--primario: #784D3C;
+	--gris: #e1e1e1;
 }
 
 html {
@@ -33,6 +34,7 @@ a {
 
 h1, h2, h3, h4 {
 	font-family: var(--fuenteH);
+	line-height: 1.2;
 }
 
 h1 {
@@ -123,3 +125,76 @@ img {
 	color: white;
 }
 
+/* CONTENIDO */
+@media (min-width: 768px) {
+	.contenido-principal {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		column-gap: 4rem;
+	}
+}
+
+.entrada {
+	border-bottom: 1px solid var(--gris);
+	margin-bottom: 2rem;
+}
+
+.entrada:last-of-type {
+	border: none;
+	margin-bottom: 0;
+}
+
+.boton {
+	display: block;
+	font-family: var(--fuenteH);
+	color: white;
+	text-align: center;
+	padding: 1rem 3rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+	.boton {
+		display: inline-block;
+	}
+}
+
+.boton-primario {
+	background-color: black;
+}
+
+.boton-secundario {
+	background-color: var(--primario);
+}
+
+/* CURSOS */
+.cursos {
+	list-style: none;
+}
+
+.widget-curso{
+	border-bottom: 1px solid var(--gris);
+	margin-bottom: 2rem;
+}
+
+.widget-curso-label:last-of-type{
+	border: none;
+	margin-bottom: 0;
+}
+
+.widget-curso-label{
+	font-family: var(--fuenteH);
+	font-weight: bold;
+}
+
+.widget-curso-info{
+	font-weight: normal;
+}
+
+.widget-curso-label,
+.widget-curso-info {
+	font-size: 2rem;
+}
