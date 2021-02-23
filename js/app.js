@@ -15,3 +15,53 @@ nuevoEnlace.classList.add('navegacion-enlace');
 // Agregarlo al Documento
 const navegacion = document.querySelector('.navegacion');
 navegacion.appendChild(nuevoEnlace);
+
+// Eventos
+// console.log(1);
+
+// window.addEventListener('load', function(){ 
+//     console.log(2);
+// });
+
+// window.onload = function(){
+//     console.log(3);
+// }
+
+// document.addEventListener('DOMContentLoaded', function(){
+//     console.log(4);
+// });
+
+
+// // window.onscroll = function() {
+// //     console.log('scrolling...');
+// // }
+
+// console.log(5);
+
+// Seleccionar elementos y asociar Eventos
+const btnEnviar = document.querySelector('.boton-primario');
+btnEnviar.addEventListener('click', function(evento) {
+    evento.preventDefault();
+
+    console.log('Enviando Formulario');
+});
+
+// Eventos Inputs y Text Area
+const datos = {
+    nombre: '',
+    email: '',
+    mensaje: ''
+}
+
+const nombre = document.querySelector('#nombre');
+const email = document.querySelector('#email');
+const mensaje = document.querySelector('#mensaje');
+
+nombre.addEventListener('input', leerTexto);
+email.addEventListener('input', leerTexto);
+mensaje.addEventListener('input', leerTexto);
+
+function leerTexto(e) {
+    datos[e.target.id] = e.target.value;
+    console.log(datos);
+}
