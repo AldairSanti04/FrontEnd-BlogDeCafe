@@ -288,3 +288,19 @@ img {
 .campo-field-area {
 	height: 20rem;
 }
+
+.error {
+	background-color: rgb(185, 0, 0);
+	padding: 1rem;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}
+
+.correcto {
+	background-color: rgb(74, 185, 0);
+	padding: 1rem;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+}

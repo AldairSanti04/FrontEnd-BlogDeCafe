@@ -39,12 +39,12 @@ navegacion.appendChild(nuevoEnlace);
 // console.log(5);
 
 // Seleccionar elementos y asociar Eventos
-const btnEnviar = document.querySelector('.boton-primario');
-btnEnviar.addEventListener('click', function(evento) {
-    evento.preventDefault();
+// const btnEnviar = document.querySelector('.boton-primario');
+// btnEnviar.addEventListener('click', function(evento) {
+//     evento.preventDefault();
 
-    console.log('Enviando Formulario');
-});
+//     console.log('Enviando Formulario');
+// });
 
 // Eventos Inputs y Text Area
 const datos = {
@@ -56,12 +56,46 @@ const datos = {
 const nombre = document.querySelector('#nombre');
 const email = document.querySelector('#email');
 const mensaje = document.querySelector('#mensaje');
+const formulario = document.querySelector('.formulario');
 
 nombre.addEventListener('input', leerTexto);
 email.addEventListener('input', leerTexto);
 mensaje.addEventListener('input', leerTexto);
 
+// Evento Submit
+formulario.addEventListener('submit', function(evento) {
+    evento.preventDefault();
+    
+    // Validar Formulario 
+    const { nombre, email, mensaje } = datos;
+
+    if(nombre === '' || email === '' || mensaje === '') {
+        mostrarAlerta('Todos los campos son obligatorios', 'error');
+        return;
+    }
+
+    mostrarAlerta('Enviado Correctamente');
+});
+
 function leerTexto(e) {
     datos[e.target.id] = e.target.value;
-    console.log(datos);
+   // console.log(datos);
+}
+
+function mostrarAlerta(mensaje, error = null){
+    const alerta = document.createElement('P');
+    alerta.textContent = mensaje;
+
+    if(error) {
+        alerta.classList.add('error');
+    }
+    else {
+        alerta.classList.add('correcto');
+    }
+
+    formulario.appendChild(alerta);
+
+    setTimeout(() => {
+        alerta.remove();
+    }, 5000);
 }
